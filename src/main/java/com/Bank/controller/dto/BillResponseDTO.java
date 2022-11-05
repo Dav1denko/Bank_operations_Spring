@@ -1,0 +1,49 @@
+package com.Bank.controller.dto;
+
+import com.Bank.entity.Bill;
+
+import java.math.BigDecimal;
+
+public class BillResponseDTO {
+    private Long billId;
+    private BigDecimal amount;
+    private Boolean isDefault;
+
+    public BillResponseDTO(Long billId, BigDecimal amount, Boolean isDefault) {
+        this.billId = billId;
+        this.amount = amount;
+        this.isDefault = isDefault;
+    }
+
+    public BillResponseDTO(Bill bill) {
+
+        billId = bill.getBillId();
+        amount = bill.getAmount();
+        isDefault = bill.getDefault();
+
+    }
+
+    public Long getBillId() {
+        return billId;
+    }
+
+    public void setBillId(Long billId) {
+        this.billId = billId;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public Boolean getDefault() {
+        return isDefault;
+    }
+
+    public void setDefault(Boolean aDefault) {
+        isDefault = aDefault;
+    }
+}
