@@ -1,2 +1,2 @@
 # Spring server application with HTTP request handling
-Pattern: Monolithic Architecture.
+Pattern: Monolithic Architecture
